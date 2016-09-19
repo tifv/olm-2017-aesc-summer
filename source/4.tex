@@ -1,0 +1,106 @@
+% $date: 2016-07-03
+
+\section*{Разности}
+
+% XXX
+% $build$matter[print]: [[.], [.]]
+
+\begingroup
+    \ifdefined\mathup
+        \def\diff{\mathop{\mathup{\Delta}}}%
+    \else
+        \def\diff{\mathop{\Delta}}%
+    \fi
+
+Пусть дана последовательность $a_{n}$, $n = 1, 2, \ldots$.
+Тогда ее \emph{разностью} будем называть последовательность
+\[
+    \diff(a_{n}) = a_{n+1} - a_{n}
+\, , \quad n = 1, 2, \ldots
+\, . \]
+Например, $\diff(n) = 1$.
+
+Заметим, что верна следующая формула:
+\begin{equation}\label{eq:diffsum}
+    a_{n} - a_{1}
+=
+    (a_{n} - a_{n-1}) + (a_{n-1} - a_{n-2}) + \ldots + (a_{2} - a_{1})
+=
+    \sum_{k=1}^{n-1}
+        \diff(a_{k})
+\; . \end{equation}
+
+\begin{problems}
+
+\item
+Найдите
+\[
+    \diff(n^2)
+, \quad
+    \diff\bigl( n (n - 1) \bigr)
+%, \quad
+%    \diff(n^{k})
+, \quad
+    \diff(2^{n})
+, \quad
+    \diff(n 2^{n})
+\]
+
+\item
+Проверьте, что
+\begin{align*}
+    \diff(a_{n} + b_{n}) &= \diff(a_{n}) + \diff(b_{n})
+\\
+    \diff(a_{n} - b_{n}) &= \diff(a_{n}) - \diff(b_{n})
+\\
+    \diff(c \cdot a_{n}) &= c \cdot \diff(a_{n})
+\end{align*}
+
+\item
+Найдите последовательности $a_{n}$ такие, что $\diff(a_{n})$ равна
+\[
+    2 n - 1
+, \quad
+    n
+, \quad
+%    n^2
+%, \quad
+    2^{n}
+, \quad
+    n 2^{n}
+\]
+
+\item
+Найдите суммы
+\\
+\subproblem
+$1 + 3 + 5 + \ldots + (2 n - 1)$;
+\\
+\subproblem
+$1 + 2 + 3 + \ldots + n$;
+\\
+\subproblem
+$1 + 2 + 2^{2} + \ldots + 2^{n}$;
+\\
+\subproblem
+$1 \cdot 2 + 2 \cdot 2^{2} + 3 \cdot 2^{3} + \ldots + n \cdot 2^{n}$.
+
+\item
+Найдите $\diff(n^3)$;
+подберите $b_{n}$ так, чтобы $\diff(b_{n}) = n^2$;
+найдите сумму
+\[
+    1^2 + 2^2 + \ldots + n^2
+\, . \]
+
+\item
+Найдите суммы:
+\\
+\subproblem $1^3 + 2^3 + \ldots + n^3$;
+\\
+\subproblem $1^2 + 3^2 + 5^2 + \ldots + (2 n - 1)^2$.
+
+\end{problems}
+
+\endgroup % \def\diff
+

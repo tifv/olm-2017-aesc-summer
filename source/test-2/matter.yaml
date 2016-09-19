@@ -1,0 +1,11 @@
+$build$matter[print]:
+- - v1
+- - v1
+- - v2
+- - v2
+$build$style[print]:
+- .[tiled4]
+$matter[no-header]:
+- v1
+- verbatim: \resetproblem
+- v2

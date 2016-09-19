@@ -1,0 +1,168 @@
+% $date: 2016-06-30
+
+\section*{Площади, связанные с параболой}
+
+% XXX
+% $build$matter[print]: [[.], [.]]
+
+% $matter[-preamble-package-guard]:
+% - preamble package: subcaption
+% - .[preamble-package-guard]
+
+\setcounter{figure}{0}
+
+\begin{problems}
+
+\item
+Площадь треугольника с~вершинами
+$A = (x_{A}, y_{A})$, $B = (x_{B}, y_{B})$, $C = (x_{C}, y_{C})$
+задается формулой
+\[
+    S_{ABC}
+=
+    \frac{1}{2}
+    \bigl \lvert
+          x_{A} \cdot y_{B} - x_{B} \cdot y_{A}
+        + x_{B} \cdot y_{C} - x_{C} \cdot y_{B}
+        + x_{C} \cdot y_{A} - x_{A} \cdot y_{C}
+    \bigr \rvert
+.\]
+Докажите эту формулу по~крайней мере при одном нетривиальном взаимном
+расположении точек.
+
+\end{problems}
+
+\begin{minipage}{0.795\linewidth} \begin{problems}
+\item
+\subproblem
+Разбив отрезок $[0; a]$ на~$n$~частей, докажите, что площадь $I_{0;a}$ фигуры
+под параболой $y = x^2$ на~этом отрезке ограничена неравенствами
+\[
+    \frac{a^3}{n^3} \cdot
+    \frac{n (n - 1) (2 n - 1)}{6}
+\leq
+    I_{0;a}
+\leq
+    \frac{a^3}{n^3} \cdot
+    \frac{n (n + 1) (2 n + 1)}{6}
+\;.\]
+\subproblem
+Докажите, что $I_{0;a} = a^3 / 3$.
+\end{problems} \end{minipage}
+\hfill
+\begin{minipage}{0.195\linewidth}
+    \jeolmfigure[width=\linewidth]{area-under-parabola-2}
+\end{minipage}
+
+\begin{problems}
+
+\item\label{problem:quadratic integral}%
+Пусть $I_{a;b}$~--- площадь криволинейной трапеции под параболой $y = x^2$
+на~отрезке $[a; b]$.
+Докажите, что
+\[
+    I_{a;b}
+=
+    \frac{b^3 - a^3}{3}
+\;.\]
+
+\begin{figure}[ht]\begin{center}
+\strut\hfill
+    \begin{subfigure}{0.45\textwidth}\begin{center}
+        \jeolmfigure[width=0.5\linewidth]{archimedes}
+        \caption{к~лемме Архимеда
+            (задача~\ref{problem:parabolic segment area}).}
+        \label{fig:parabolic segment area}
+    \end{center}\end{subfigure}
+\hfill
+    \begin{subfigure}{0.45\textwidth}\begin{center}
+        \jeolmfigure[width=0.5\linewidth]{archimedes-midpoints}
+        \caption{к~задаче~\ref{problem:parabolic triangle midpoints}.}
+        \label{fig:parabolic triangle midpoints}
+    \end{center}\end{subfigure}
+\hfill\strut
+\caption{}
+\end{center}\end{figure}
+
+\item\label{problem:parabolic segment area}%
+Пусть $A = (a, a^2)$ и~$B = (b, b^2)$~--- точки параболы $y = x^2$,
+и~касательные к~ней в~этих точках пересекаются в~точке~$C$
+(рис.~\ref{fig:parabolic segment area}).
+\\
+\subproblem
+Найдите площадь сегмента $AB$ параболы, представив её~как разность трапеции
+$(a,0)$, $A$, $B$, $(b,0)$ и~криволинейной трапеции из~задачи
+\ref{problem:quadratic integral};
+\\
+\subproblem
+Найдите $S_{ABC}$ и~докажите \emph{лемму Архимеда:}
+\[
+    S_{\text{сегмент $AB$}}
+=
+    \frac{2}{3} \cdot S_{ABC}
+\]
+
+\item\label{problem:area sample 1}%
+Найдите площадь фигуры (рис.~\ref{fig:area sample 1}), ограниченной графиками
+функций $f(x) = x^2$ и~$g(x) = 2 x - x^2$.
+
+\begin{figure}[ht]\begin{center}
+%\strut\hfill
+%    \begin{subfigure}{0.45\textwidth}\begin{center}
+        \jeolmfigure[width=0.225\linewidth]{area-sample-1}
+        \caption{к~задаче~\ref{problem:area sample 1}.}
+        \label{fig:area sample 1}
+%    \end{center}\end{subfigure}
+%\hfill
+%    \begin{subfigure}{0.45\textwidth}\begin{center}
+%        \jeolmfigure[width=0.5\linewidth]{area-sample-2}
+%        \caption{к~задаче~\ref{problem:area sample 2}.}
+%        \label{fig:area sample 2}
+%    \end{center}\end{subfigure}
+%\hfill\strut
+%\caption{}
+\end{center}\end{figure}
+
+% СР
+%\item\label{problem:area sample 2}%
+%Найдите площадь фигуры (рис.~\ref{fig:area sample 2}), ограниченной
+%параболой $y = 1 - x^2$ и~отрезками, соединающими точки $(-1, 0)$ и~$(1, 0)$
+%с~точкой $(0, 2)$.
+
+\item\label{problem:parabolic triangle midpoints}%
+Пусть $A$ и~$B$~--- точки параболы, и~касательные к~параболе в~этих точках
+пересекаются в~точке~$C$
+(рис.~\ref{fig:parabolic triangle midpoints}).
+\\
+\subproblem
+Пусть $M$~--- середина~$AB$.
+Докажите, что прямая~$CM$ параллельна оси параболы (т.~е. точка~$C$ лежит точно
+<<под>> точкой~$M$).
+\\
+\subproblem
+Пусть $T$~--- точка пересечения $CM$ с~параболой.
+Докажите, что $T$ делит отрезок~$CM$ пополам.
+\\
+\subproblem
+Докажите, что касательная к~параболе в~точке~$T$ параллельна прямой~$AB$
+и~содержит среднюю линию треугольника $ABC$.
+
+\item
+На~параболе $y = p x^2 + q x + r$ ($p \neq 0$) даны две точки $A$ и~$B$
+с~абсциссами $a$ и~$b$ соответственно.
+Найдите $d$ такое, что прямая $x = d$ делит сегмент~$AB$ параболы пополам
+(по~площади).
+
+\item
+Пусть $A$, $B$, $C$~--- точки параболы $y = x^2$, а~касательные к~ней
+в~этих точках попарно пересекаются в~точках $P$, $Q$, $R$.
+Докажите, что $S_{ABC} = 2 S_{PQR}$.
+
+% КР
+%\item
+%На~параболе $y = x^2$ отмечены точки $A = (a, a^2)$ и~$B = (b, b^2)$.
+%Найдите между ними точку $M = (m, m^2)$, для которой сумма площадей двух
+%сегментов, ограниченных параболой и~отрезками $AM$ и~$BM$ наименьшая.
+
+\end{problems}
+

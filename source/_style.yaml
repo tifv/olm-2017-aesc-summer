@@ -1,0 +1,9 @@
+$style:
+- /_style/
+- verbatim: |-
+    \renewcommand\jeolminstitution
+      {СУНЦ МГУ --- Колмогоровская летняя школа}
+    \renewcommand\jeolmdaterange
+      {26 июня --- 6 июля 2016 г.}
+    \renewcommand\jeolmgroup
+      {Алгебра 11ЕЖИ}
